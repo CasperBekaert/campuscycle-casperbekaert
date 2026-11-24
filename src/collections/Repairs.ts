@@ -1,5 +1,5 @@
 import type { CollectionConfig } from 'payload'
-import { editorsOnlyField, publicContent } from '../access'
+import { publicContent } from '../access'
 import { price } from './fields'
 
 // The repairs the clinic can do, each with its price.
@@ -26,9 +26,6 @@ export const Repairs: CollectionConfig = {
       type: 'join',
       collection: 'bookings',
       on: 'repairs',
-      access: {
-        read: editorsOnlyField,
-      },
     },
   ],
 }
